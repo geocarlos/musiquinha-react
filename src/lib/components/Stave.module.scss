@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Noto Music';
+    src: url('../assets/fonts/NotoMusic-Regular.ttf');
+}
+.stave {
+    display: grid;
+    font-family: "Noto Music", sans-serif;
+    letter-spacing: -.1em;
+    position: relative;
+    margin: .5em 0;
+    height: fit-content;
+    border: solid thin;
+    padding: 1rem;
+}

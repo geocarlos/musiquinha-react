@@ -1,0 +1,27 @@
+.note {
+    display: flex;
+    position: relative;
+    width: 1.7em;
+    justify-content: center;
+    height: fit-content;
+    align-items: center;
+}
+
+.duration {
+    position: absolute;
+}
+
+.stemDownwards {
+    transform: rotate(180deg);
+}
+
+.stemDownwardsFlag {
+    position: absolute;
+    bottom: 0;
+    left: .35em;
+    transform: rotateY(180deg);
+}
+
+.isPlaying {
+    color: orange;
+}

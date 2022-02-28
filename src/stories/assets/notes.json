@@ -1,0 +1,49 @@
+{
+    "treble": [
+        { "clef": "treble", "duration": "w", "keys": ["C4"] },
+        { "clef": "treble", "duration": "h", "keys": ["D4"] },
+        { "clef": "treble", "duration": "q", "keys": ["E4"] },
+        { "clef": "treble", "duration": "q", "keys": ["F4"] },
+        { "clef": "treble", "duration": "h", "keys": ["G4"] },
+        { "clef": "treble", "duration": "h", "keys": ["A4"] },
+        { "clef": "treble", "duration": "q", "keys": ["B4"] },
+        { "clef": "treble", "duration": "q", "keys": ["C5"] },
+        { "clef": "treble", "duration": "h", "keys": ["D5"] },
+        { "clef": "treble", "duration": "q", "keys": ["E5"] },
+        { "clef": "treble", "duration": "q", "keys": ["F5"] },
+        { "clef": "treble", "duration": "h", "keys": ["G5"] },
+        { "clef": "treble", "duration": "8", "keys": ["E5"] },
+        { "clef": "treble", "duration": "16", "keys": ["G5"] },
+        { "clef": "treble", "duration": "16", "keys": ["F5"] },
+        { "clef": "treble", "duration": "h", "keys": ["G5"] }
+    ],
+    "bass": [
+        { "clef": "bass", "duration": "w", "keys": ["E2"] },
+        { "clef": "bass", "duration": "h", "keys": ["F2"] },
+        { "clef": "bass", "duration": "q", "keys": ["G2"] },
+        { "clef": "bass", "duration": "q", "keys": ["A2"] },
+        { "clef": "bass", "duration": "8", "keys": ["B2"] },
+        { "clef": "bass", "duration": "8", "keys": ["C3"] },
+        { "clef": "bass", "duration": "q", "keys": ["D3"] },
+        { "clef": "bass", "duration": "h", "keys": ["E3"] },
+        { "clef": "bass", "duration": "q", "keys": ["F3"] },
+        { "clef": "bass", "duration": "q", "keys": ["G3"] },
+        { "clef": "bass", "duration": "h", "keys": ["A3"] },
+        { "clef": "bass", "duration": "w", "keys": ["B3"] },
+        { "clef": "bass", "duration": "8", "keys": ["C3"] },
+        { "clef": "bass", "duration": "8", "keys": ["D3"] },
+        { "clef": "bass", "duration": "q", "keys": ["B3"] },
+        { "clef": "bass", "duration": "h", "keys": ["C3"] }
+    ],
+    "rests": [
+        { "clef": "treble", "duration": "0", "keys": ["R0"] },
+        { "clef": "treble", "duration": "w", "keys": ["Rw"] },
+        { "clef": "treble", "duration": "h", "keys": ["Rh"] },
+        { "clef": "treble", "duration": "q", "keys": ["Rq"] },
+        { "clef": "treble", "duration": "8", "keys": ["R8"] },
+        { "clef": "treble", "duration": "16", "keys": ["R16"] },
+        { "clef": "treble", "duration": "32", "keys": ["R32"] },
+        { "clef": "treble", "duration": "64", "keys": ["R64"] },
+        { "clef": "treble", "duration": "128", "keys": ["R128"] }
+    ]
+}

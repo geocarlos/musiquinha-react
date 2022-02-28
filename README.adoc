@@ -1,0 +1,21 @@
+:doctype: article
+:showtitle:
+= Musiquinha
+
+This is a project to develop a React library of components for music notation using mostly fonts (or glyphs). For some features, SVG may be used.
+
+== Planning
+
+== Components
+
+- Note: a component to render a note on a stave;
+- Stave: a 5-line stave, including clef, time signature and key signature;
+- Meseare: part of a stave;
+- GrandStaff: a set of two staves on top of each other;
+
+== To do
+- Legder lines
+- Key signature
+- Beams
+- Ties
+- ...

@@ -1,5 +1,8 @@
-import TestComponent from "./TestComponents/TestComponent";
-import {TestComponentProps} from './TestComponents/TestComponent.types';
+import Note, {INote, noteStyleClasses} from "./components/Note";
+import Stave, {IStave, Clef} from "./components/Stave";
+import GradStaff, {IGradStaff} from "./components/GrandStaff";
+import Measure, {IMeasure} from "./components/Measure";
+import MultilineMeasure, {IMultilineMeasure} from "./components/MultilineMeasure";
 
-export { TestComponent };
-export type {TestComponentProps};
+export {Note, Stave, GradStaff, Measure, MultilineMeasure, noteStyleClasses};
+export type {INote, IStave, Clef, IGradStaff, IMeasure, IMultilineMeasure};

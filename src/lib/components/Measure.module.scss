@@ -1,0 +1,41 @@
+.measure {
+    position: relative;
+    display: flex;
+    flex-wrap: no-wrap;
+    width: fit-content;
+    margin: 1em 0;
+}
+.clef {
+    position: absolute;
+    left: .2em
+}
+
+.barLine {
+    position: absolute;
+}
+
+.notes {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.timeSignature {
+    font-family: 'Archivo Black', sans-serif;
+    position: absolute;
+    font-size: .755em;
+    top: .5em;
+    left: 1.7em;
+}
+
+.staveLines {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
