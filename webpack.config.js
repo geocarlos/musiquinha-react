@@ -1,9 +1,9 @@
 const path = require("path");
 
 module.exports = {
-  entry: "./src/index.ts",
+  entry: "./src/lib/index.ts",
   output: {
-    path: path.resolve(__dirname, "build"),
+    path: path.resolve(__dirname, "dist"),
     filename: "[name].js",
     library: "react-component-library",
     libraryTarget: "umd"
