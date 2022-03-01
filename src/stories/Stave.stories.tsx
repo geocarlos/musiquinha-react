@@ -1,5 +1,5 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { Stave } from '../lib';
+import { INote, Note, Stave } from '../lib';
 import notes from './assets/notes.json';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
@@ -10,7 +10,15 @@ export default {
 } as ComponentMeta<typeof Stave>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof Stave> = (args) => <Stave {...args} />;
+const Template: ComponentStory<typeof Stave> = (args) => args.notes ? 
+    <Stave {...args} /> : 
+    <Stave {...args}>{(notes.treble as INote[]).map((note, i) => (<Note key={`__note__${i}`} {...note} />))}</Stave>;
+
+export const Children = Template.bind({});
+// More on args: https://storybook.js.org/docs/react/writing-stories/args
+Children.args = {
+    timeSignature: [4, 4]
+};
 
 export const Treble = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
