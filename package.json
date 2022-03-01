@@ -1,11 +1,11 @@
 {
-  "name": "react-component-library",
+  "name": "musiquinha-react",
   "version": "1.0.0",
-  "main": "build/main.js",
+  "main": "dist/main.js",
   "files": [
-    "build"
+    "dist"
   ],
-  "types": "build/index.d.ts",
+  "types": "dist/index.d.ts",
   "description": "A skeleton to create your own React component library using Webpack, TypeScript, Sass and Storybook",
   "scripts": {
     "build": "webpack --mode production",
@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HarveyD/react-component-library.git"
+    "url": "git+https://github.com/geocarlos/musiquinha-react.git"
   },
   "keywords": [
     "React",
@@ -33,9 +33,9 @@
   "author": "Harvey Delaney",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/HarveyD/react-component-library/issues"
+    "url": "https://github.com/geocarlos/musiquinha-react/issues"
   },
-  "homepage": "https://github.com/HarveyD/react-component-library#readme",
+  "homepage": "https://github.com/geocarlos/musiquinha-react#readme",
   "peerDependencies": {
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0",

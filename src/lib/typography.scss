@@ -1,4 +1,19 @@
-$font-family: "Avenir Next", Helvetica, Arial, sans-serif;
+@font-face {
+  font-family: 'Noto Music';
+  src: url('../assets/fonts/NotoMusic-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  src: url('../assets/fonts/NotoSans-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Archivo Black';
+  src: url('../assets/fonts/ArchivoBlack-Regular.ttf');
+}
+
+$font-family: 'Noto Sans', sans-serif;
 
 @mixin font-defaults {
   font-family: $font-family;
@@ -7,6 +22,6 @@ $font-family: "Avenir Next", Helvetica, Arial, sans-serif;
 @mixin heading {
   @include font-defaults;
 
-  font-size: 40px;
+  font-size: 2.5rem;
   font-weight: bold;
 }

@@ -20,7 +20,7 @@ const getTimesAndMeasures = (notes: INote[], timeSignature: number[]) => {
     };
 
     const measureDuration = timeSignature[0] / timeSignature[1];
-    if (measureDuration !== 1) {
+    if (measureDuration !== timeSignature[1]) {
         durationTable.w = measureDuration;
     }    
 
