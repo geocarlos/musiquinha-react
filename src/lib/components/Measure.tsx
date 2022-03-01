@@ -1,4 +1,4 @@
-import { CSSProperties, ReactNode } from 'react';
+import React, { CSSProperties, ReactNode } from 'react';
 import classes from './Measure.module.scss';
 import { Clef } from './Stave';
 

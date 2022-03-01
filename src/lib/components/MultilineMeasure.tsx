@@ -1,4 +1,4 @@
-import { Fragment } from 'react';
+import React from 'react';
 import Measure from './Measure';
 import classes from './MultilineMeasure.module.scss';
 import { INote } from './Note';

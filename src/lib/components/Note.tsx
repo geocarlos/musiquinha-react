@@ -1,3 +1,4 @@
+import React from 'react';
 import classes from './Note.module.scss';
 
 export {classes as noteStyleClasses};

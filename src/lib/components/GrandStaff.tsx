@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import getTimesAndMeasures from "../util/getTimesAndMeasures";
 import MultilineMeasure from "./MultilineMeasure";
 import { INote } from "./Note";
@@ -11,7 +11,7 @@ export type IGradStaff = IStave & {
 };
 
 const GradStaff = (props: IGradStaff) => {
-    const { noteLines, timeSignature, measuresPerLine = 4, showPlayButton = true } = props;
+    const { noteLines, timeSignature, showPlayButton = true } = props;
     const [measures, setMeasures] = useState<Array<INote[][]>>([]);
     const [toneNotes, setToneNotes] = useState<INote[]>([]);
 
@@ -21,7 +21,7 @@ const GradStaff = (props: IGradStaff) => {
             const _toneNotes: INote[] = [];
             noteLines.forEach((notes) => {
                 const notesWithIds = notes.map((note, index) => ({...note, id: `_GrandStaff_${note.clef}_${note.keys.join('_')}_${index}`}));
-                const { measures, notesWithTimes } = getTimesAndMeasures(notesWithIds, props.timeSignature);
+                const { measures, notesWithTimes } = getTimesAndMeasures(notesWithIds, timeSignature);
                 _measures.push(measures);
                 _toneNotes.push(...notesWithTimes);
             })
@@ -42,6 +42,9 @@ const GradStaff = (props: IGradStaff) => {
             setToneNotes(_toneNotes);
         }
     }, [noteLines, timeSignature]);
+
+    // Prevent invalid value for measuresPerLine
+    const measuresPerLine = props.measuresPerLine > 0 ? props.measuresPerLine : 1;
 
     return (
         <div

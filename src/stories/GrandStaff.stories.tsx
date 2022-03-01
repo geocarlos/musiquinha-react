@@ -13,17 +13,25 @@ export default {
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 const Template: ComponentStory<typeof GrandStaff> = (args) => <GrandStaff {...args} />;
 
-export const SomeNotes = Template.bind({});
+export const TwoDifferentClefs = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
-SomeNotes.args = {
+TwoDifferentClefs.args = {
     noteLines: [notes.treble, notes.bass],
     bpm: 180,
     timeSignature: [4, 4],
     measuresPerLine: 4
 };
 
-export const Piece = Template.bind({});
-Piece.args = {
+export const TwoSameClefs = Template.bind({});
+TwoSameClefs.args = {
+    noteLines: [notes.treble, notes.treble],
+    bpm: 180,
+    timeSignature: [4, 4],
+    measuresPerLine: 4
+};
+
+export const ARealPiece = Template.bind({});
+ARealPiece.args = {
     noteLines: piece.notes,
     bpm: piece.bpm,
     timeSignature: piece.timeSignature,

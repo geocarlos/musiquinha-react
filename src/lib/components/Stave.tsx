@@ -1,4 +1,4 @@
-import { Children, Fragment, ReactNode, useEffect, useState } from 'react';
+import React, { Children, Fragment, ReactNode, useEffect, useState } from 'react';
 import getTimesAndMeasures from '../util/getTimesAndMeasures';
 import Measure from './Measure';
 import Note, { INote } from './Note';

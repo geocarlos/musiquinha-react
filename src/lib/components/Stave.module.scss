@@ -1,7 +1,5 @@
-@font-face {
-    font-family: 'Noto Music';
-    src: url('../assets/fonts/NotoMusic-Regular.ttf');
-}
+@import "../typography.scss";
+
 .stave {
     display: grid;
     font-family: "Noto Music", sans-serif;
