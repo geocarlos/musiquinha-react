@@ -1,7 +1,8 @@
 import React from 'react';
 import classes from './Note.module.scss';
+import Wrapper from './Wrapper';
 
-export {classes as noteStyleClasses};
+export { classes as noteStyleClasses };
 
 type NoteName = 'A' | 'B' | 'C' | 'D' | 'E' | 'F' | 'G' | 'R';
 type Octave = 0 | 1 | 2 | 3 | 4 | 5 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;

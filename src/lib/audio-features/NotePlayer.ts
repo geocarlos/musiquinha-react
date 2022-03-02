@@ -1,5 +1,5 @@
 import { PolySynth, Transport, Part, Time, start, Sampler } from "tone";
-import { INote, noteStyleClasses } from "../../lib";
+import { INote, noteStyleClasses } from "../../";
 
 window.onclick = () => start();
 

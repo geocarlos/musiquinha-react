@@ -20,7 +20,7 @@ const GradStaff = (props: IGradStaff) => {
             const _measures: INote[][][] = [];
             const _toneNotes: INote[] = [];
             noteLines.forEach((notes) => {
-                const notesWithIds = notes.map((note, index) => ({...note, id: `_GrandStaff_${note.clef}_${note.keys.join('_')}_${index}`}));
+                const notesWithIds = notes.map((note, index) => ({ ...note, id: `_GrandStaff_${note.clef}_${note.keys.join('_')}_${index}` }));
                 const { measures, notesWithTimes } = getTimesAndMeasures(notesWithIds, timeSignature);
                 _measures.push(measures);
                 _toneNotes.push(...notesWithTimes);

@@ -1,5 +1,5 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { GrandStaff} from '../lib';
+import { GrandStaff} from '../';
 import notes from './assets/notes.json';
 import piece from './assets/sample-music-pieces/fuer-elise.json';
 

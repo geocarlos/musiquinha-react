@@ -1,5 +1,5 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { INote, Note, Stave } from '../lib';
+import { INote, Note, Stave } from '../';
 import notes from './assets/notes.json';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export

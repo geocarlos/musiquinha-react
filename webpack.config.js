@@ -1,7 +1,7 @@
 const path = require("path");
 
 module.exports = {
-  entry: "./src/lib/index.ts",
+  entry: "./src/index.ts",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].js",
@@ -25,11 +25,20 @@ module.exports = {
         test: /\.scss$/,
         use: ["style-loader", "css-loader", "sass-loader"],
         include: path.resolve(__dirname, "./src")
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: './fonts/[name][ext]',
+        }
+        
       }
     ]
   },
   externals: {
     react: "react",
-    "react-dom": "react-dom"
+    "react-dom": "react-dom",
+    tone: "tone"
   }
 };

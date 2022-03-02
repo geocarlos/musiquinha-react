@@ -52,7 +52,7 @@ const Stave = (props: IStave) => {
 
     useEffect(() => {
         if (notes) {
-            const notesWithIds = notes.map((note, index) => ({...note, id: `_${note.clef}_${note.keys.join('_')}_${index}`}));
+            const notesWithIds = notes.map((note, index) => ({ ...note, id: `_${note.clef}_${note.keys.join('_')}_${index}` }));
             const { measures, notesWithTimes } = getTimesAndMeasures(notesWithIds, props.timeSignature);
             setMeasures(measures);
             setToneNotes(notesWithTimes);
