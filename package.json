@@ -6,7 +6,7 @@
     "dist"
   ],
   "types": "dist/index.d.ts",
-  "description": "A skeleton to create your own React component library using Webpack, TypeScript, Sass and Storybook",
+  "description": "A library of components to create simple music notation with audio",
   "scripts": {
     "build": "webpack --mode production",
     "test": "jest",
@@ -30,7 +30,7 @@
     "Sass",
     "Storybook"
   ],
-  "author": "Harvey Delaney",
+  "author": "Geocarlos Alves",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/geocarlos/musiquinha-react/issues"
