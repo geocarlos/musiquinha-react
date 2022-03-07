@@ -10,7 +10,7 @@ This is a project to develop a React library of components for music notation us
 
 - Note: a component to render a note on a stave;
 - Stave: a 5-line stave, including clef, time signature and key signature;
-- Meseare: part of a stave;
+- Measure: part of a stave, corresponding to the duration defined by the time signature;
 - GrandStaff: a set of two staves on top of each other;
 
 == To do
@@ -18,4 +18,5 @@ This is a project to develop a React library of components for music notation us
 - Key signature
 - Beams
 - Ties
+- Support multiple voices
 - ...
