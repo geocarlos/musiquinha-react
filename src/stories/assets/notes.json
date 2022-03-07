@@ -15,6 +15,7 @@
         { "clef": "treble", "duration": "8", "keys": ["E5"] },
         { "clef": "treble", "duration": "16", "keys": ["G5"] },
         { "clef": "treble", "duration": "16", "keys": ["F5"] },
+        { "clef": "treble", "duration": "q", "keys": ["E5"] },
         { "clef": "treble", "duration": "h", "keys": ["G5"] }
     ],
     "bass": [
