@@ -3,6 +3,7 @@ import Stave, {IStave, Clef} from "./lib/components/Stave";
 import GrandStaff, {IGradStaff} from "./lib/components/GrandStaff";
 import Measure, {IMeasure} from "./lib/components/Measure";
 import MultilineMeasure, {IMultilineMeasure} from "./lib/components/MultilineMeasure";
+import { playNotes } from "./lib/audio-features/NotePlayer";
 
-export {Note, Stave, GrandStaff, Measure, MultilineMeasure, noteStyleClasses};
+export {Note, Stave, GrandStaff, Measure, MultilineMeasure, noteStyleClasses, playNotes};
 export type {INote, IStave, Clef, IGradStaff, IMeasure, IMultilineMeasure};
