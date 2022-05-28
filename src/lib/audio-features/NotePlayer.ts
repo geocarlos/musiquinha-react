@@ -68,3 +68,9 @@ export const playNotes = ({ bpm, timeSignature, notes, instrument }: IPlayer) =>
 
     load(instrument);
 };
+
+export const stopPlaying = () => {
+    Transport.stop();
+    part?.dispose();
+    part = null;
+}

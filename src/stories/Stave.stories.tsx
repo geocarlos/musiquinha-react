@@ -25,7 +25,7 @@ const Template: ComponentStory<typeof Stave> = (args) => {
         right: 10
     }}>
         <button disabled={args.notes?.length === 0} onClick={() => {
-            playNotes({ notes: toneNotes, bpm: args.bpm, timeSignature: args.timeSignature });
+            playNotes({ notes: toneNotes, bpm: 100, timeSignature: args.timeSignature });
         }}>Play</button>
     </div>
     return args.notes ?

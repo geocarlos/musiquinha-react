@@ -19,7 +19,7 @@ export type IStave = {
     children?: ReactNode | ReactNode[];
     notes?: INote[];
     measuresPerLine?: number;
-    toneNotesHandler: (notes: INote[]) => void;
+    toneNotesHandler?: (notes: INote[]) => void;
 }
 
 export const getStaveLines = (length?: number) => {
