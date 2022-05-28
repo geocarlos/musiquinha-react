@@ -1,6 +1,5 @@
 import React from 'react';
 import classes from './Note.module.scss';
-import Wrapper from './Wrapper';
 
 export { classes as noteStyleClasses };
 
