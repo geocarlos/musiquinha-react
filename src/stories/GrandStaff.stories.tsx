@@ -1,5 +1,8 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { GrandStaff} from '../';
+import { useState } from 'react';
+import { GrandStaff } from '../';
+import { playNotes } from '../lib/audio-features/NotePlayer';
+import { INote } from '../lib/components/Note';
 import notes from './assets/notes.json';
 import piece from './assets/sample-music-pieces/fuer-elise.json';
 
@@ -11,7 +14,24 @@ export default {
 } as ComponentMeta<typeof GrandStaff>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof GrandStaff> = (args) => <GrandStaff {...args} />;
+const Template: ComponentStory<typeof GrandStaff> = (args) => {
+    const [toneNotes, setToneNotes] = useState<INote[]>([]);
+
+    const getToneNotesFromStave = (notes: INote[]) => {
+        setToneNotes(notes);
+    }
+
+    const playButton = <div style={{
+        width: 'fit-content',
+        height: 'fit-content',
+        right: 10
+    }}>
+        <button disabled={args.notes?.length === 0} onClick={() => {
+            playNotes({ notes: toneNotes, bpm: args.bpm, timeSignature: args.timeSignature });
+        }}>Play</button>
+    </div>
+    return <>{playButton}<GrandStaff {...{...args, toneNotesHandler: getToneNotesFromStave}} /></>
+};
 
 export const TwoDifferentClefs = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args

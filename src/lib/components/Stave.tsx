@@ -2,7 +2,6 @@ import React, { Children, Fragment, ReactNode, useEffect, useState } from 'react
 import getTimesAndMeasures from '../util/getTimesAndMeasures';
 import Measure from './Measure';
 import Note, { INote } from './Note';
-import { playNotes } from '../audio-features/NotePlayer';
 import classes from './Stave.module.scss';
 
 export const clefs: any = {
@@ -20,7 +19,7 @@ export type IStave = {
     children?: ReactNode | ReactNode[];
     notes?: INote[];
     measuresPerLine?: number;
-    showPlayButton?: boolean;
+    toneNotesHandler: (notes: INote[]) => void;
 }
 
 export const getStaveLines = (length?: number) => {
@@ -46,7 +45,7 @@ export const renderNotes = (notes: INote[]) => {
 
 const Stave = (props: IStave) => {
 
-    const { notes, timeSignature, bpm = 100, measuresPerLine = 4, showPlayButton = notes !== undefined, children } = props;
+    const { notes, timeSignature, bpm = 100, measuresPerLine = 4, children } = props;
     const [measures, setMeasures] = useState<Array<INote[]>>([]);
     const [toneNotes, setToneNotes] = useState<INote[]>([]);
 
@@ -58,6 +57,13 @@ const Stave = (props: IStave) => {
             setToneNotes(notesWithTimes);
         }
     }, [notes, timeSignature]);
+
+    const { toneNotesHandler } = props;
+    useEffect(() => {
+        if (toneNotes.length && toneNotesHandler) {
+            toneNotesHandler(toneNotes);
+        }
+    }, [toneNotes, toneNotesHandler])
 
     return (
         <div
@@ -88,16 +94,6 @@ const Stave = (props: IStave) => {
                         isLast={index === measures.length - 1}
                     />
                 ))}
-            {showPlayButton && <div style={{
-                width: 'fit-content',
-                height: 'fit-content',
-                position: 'absolute',
-                right: 10
-            }}>
-                <button disabled={toneNotes.length === 0} onClick={() => {
-                    playNotes({ notes: toneNotes, bpm, timeSignature });
-                }}>Play</button>
-            </div>}
         </div>
     );
 }

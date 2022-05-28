@@ -4,14 +4,13 @@ import MultilineMeasure from "./MultilineMeasure";
 import { INote } from "./Note";
 import { IStave } from "./Stave";
 import classes from "./GrandStaff.module.scss";
-import { playNotes } from "../audio-features/NotePlayer";
 
 export type IGradStaff = IStave & {
-    noteLines: INote[][]
+    noteLines: INote[][];
 };
 
 const GradStaff = (props: IGradStaff) => {
-    const { noteLines, timeSignature, showPlayButton = true } = props;
+    const { noteLines, timeSignature } = props;
     const [measures, setMeasures] = useState<Array<INote[][]>>([]);
     const [toneNotes, setToneNotes] = useState<INote[]>([]);
 
@@ -43,6 +42,13 @@ const GradStaff = (props: IGradStaff) => {
         }
     }, [noteLines, timeSignature]);
 
+    const { toneNotesHandler } = props;
+    useEffect(() => {
+        if (toneNotes.length && toneNotesHandler) {
+            toneNotesHandler(toneNotes);
+        }
+    }, [toneNotes, toneNotesHandler])
+
     // Prevent invalid value for measuresPerLine
     const measuresPerLine = props.measuresPerLine > 0 ? props.measuresPerLine : 1;
 
@@ -58,16 +64,6 @@ const GradStaff = (props: IGradStaff) => {
                 timeSignature={timeSignature}
                 measuresPerLine={measuresPerLine}
             />
-            {showPlayButton && <div style={{
-                width: 'fit-content',
-                height: 'fit-content',
-                position: 'absolute',
-                right: 10
-            }}>
-                <button disabled={toneNotes.length === 0} onClick={() => {
-                    playNotes({ notes: toneNotes, bpm: props.bpm || 100, timeSignature });
-                }}>Play</button>
-            </div>}
         </div>
     );
 }
